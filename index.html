@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <title>Simple Expense Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Expense Tracker</h2>
+        <div class="card">
+            <div class="singlecard">
+                <h4>Total Deposit</h4>
+                <p class="deposit" id="totaldeposit">Tk 0.00</p>
+            </div>
+            <div class="singlecard">
+                <h4>Total Withdraw</h4>
+                <p class="withdraw" id="totalwithdraw" >Tk 0.00</p>
+            </div>
+            <div class="singlecard">
+                <h4>Total Balance</h4>
+                <p class="balance" id="totalbalance">Tk 0.00</p>
+            </div>
+        </div>
+        <div class="inputfld">
+            <input type="number" id="inputamount" placeholder="Enter amount" step="any"/>
+        </div>
+        <div class="btn">
+            <button class="btndep" onclick="deposit()">Deposit</button>
+            <button class="btnwit" onclick="withdraw()">Withdraw</button>
+        </div>
+    </div>
+</body>
+</html>
