@@ -21,6 +21,7 @@ body{
     width: 400px;
     height: 250px;
     padding: 30px 20px 10px 20px;
+    box-shadow: 0 0 5px 3px #dddada;
 }
 
 .card{
@@ -40,6 +41,12 @@ body{
     align-items: center;
     gap: 5px;
     background-color: white;
+    box-shadow: 0 0 10px 0.5px #eeebeb;
+    border-radius: 5px;
+}
+.singlecard:hover{
+    transform: translate(0, -5px);
+    transition: ease-out 0.3s;
 }
 .singlecard h4{
     font-size: 14px;
