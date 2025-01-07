@@ -5,8 +5,8 @@ let totalWithdraw = 0.00;
 function deposit(){
     const inputAmount = document.getElementById("inputamount");
     const amount = parseFloat(inputAmount.value.trim());
-    if(amount<=0){
-        alert("Please Enter an amount greater than 0");
+    if(amount<=0 || isNaN(amount)){
+        alert("Please enter an amount greater than 0");
     }
     else{
         totalDeposit = totalDeposit + amount;
@@ -25,6 +25,9 @@ function withdraw(){
     const amount = parseFloat(inputAmount.value.trim());
     if(balance < amount){
         alert("You have not sufficient balance");
+    }
+    else if(amount<=0 || isNaN(amount)){
+        alert("Please enter an amount greater than 0");
     }
     else{
         totalWithdraw = totalWithdraw + amount;
