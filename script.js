@@ -6,7 +6,7 @@ function deposit(){
     const inputAmount = document.getElementById("inputamount");
     const amount = parseFloat(inputAmount.value.trim());
     if(amount<=0 || isNaN(amount)){
-        alert("Please enter an amount greater than 0");
+        alert("Please enter a valid amount");
     }
     else{
         totalDeposit = totalDeposit + amount;
@@ -18,16 +18,17 @@ function deposit(){
         depositBalance.innerHTML = `Tk ${totalDeposit.toFixed(2)}`;
         totalBalance.innerHTML = `Tk ${balance.toFixed(2)}`;
     }
+    inputAmount.value = " ";
 }
 
 function withdraw(){
     const inputAmount = document.getElementById("inputamount");
     const amount = parseFloat(inputAmount.value.trim());
     if(balance < amount){
-        alert("You have not sufficient balance");
+        alert("You do not have sufficient balance");
     }
     else if(amount<=0 || isNaN(amount)){
-        alert("Please enter an amount greater than 0");
+        alert("Please enter a valid amount");
     }
     else{
         totalWithdraw = totalWithdraw + amount;
@@ -39,4 +40,5 @@ function withdraw(){
         withdrawBalance.innerText = `Tk ${totalWithdraw.toFixed(2)}`;
         totalBalance.innerText = `Tk ${balance.toFixed(2)}`;
     }
+    inputAmount.value = " ";
 }
